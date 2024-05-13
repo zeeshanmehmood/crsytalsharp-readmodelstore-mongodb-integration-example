@@ -5,8 +5,8 @@ namespace CrystalSharpReadModelStoreMongoDbExample.Application.Domain.Aggregates
 {
     public class Customer : AggregateRoot<int>
     {
-        public string Name { get; set; }
-        public string Address { get; set; }
+        public string Name { get; private set; }
+        public string Address { get; private set; }
 
         private static void ValidateCustomer(Customer customer)
         {
